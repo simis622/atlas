@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <title>Atlas států</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        .card-img-top {
+            height: 160px; /* Pevná výška pro všechny vlajky */
+            object-fit: cover; /* Ořízne přesahující části, ale zachová poměr stran a nedeformuje obrázek */
+            border-bottom: 1px solid #dee2e6;
+        }
+        body {
+            background-color: #1f1b5c;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-primary text-center p-5">
+        <h1>Atlas států</h1>
+        <div>
+            <select id="continent">
+                <option value="europe">Evropa</option>
+                <option value="asia">Asie</option>
+                <option value="africa">Afrika</option>
+                <option value="americas">Amerika</option>
+                <option value="oceania">Oceánie</option>
+            </select>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-3 p-3" id="countries-list">
+            
+            <div class="col">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="czech.png" alt="Česká republika" />
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title"><a href="#">Česká republika</a></h4>
+                        <p class="card-text">Hlavní město: <b>Praha</b></p>
+                        
+                        <p class="mt-auto mb-0">
+                            <button class="btn btn-info" data-bs-toggle="modal"
+                                data-bs-target="#one-country"
+                                data-name="Česká republika"
+                                data-capital="Praha"
+                                data-population="10 524 167"
+                                data-area="78 871 km²"
+                                data-currency="Česká koruna (CZK)">
+                                Informace
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </main>
+    <footer class="bg-dark p-5 text-light text-center">
+        &copy; IT2 - Šimon Pavera
+    </footer>
+
+    <div class="modal fade" id="one-country" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h4 class="modal-title" id="modal-title-content">Název státu</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body" id="modal-body-content">
+                    </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    
+    <script src="atlas.js"></script>
+</body>
+
+</html>
